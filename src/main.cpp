@@ -20,8 +20,7 @@ MD_MAX72XX led_mx = MD_MAX72XX(MD_MAX72XX::PAROLA_HW, LED_MX_CS_PIN, LED_MX_MAX_
 
 #define CHAR_SPACING 1
 
-// Messages and pins for the joystick
-char GAME_OVER[] = "|||||||||||||||||||";
+char GAME_OVER_MESSAGE[] = "|||||||||||||||||||";
 char START_MESSAGE[] = " Start!";
 char SCORE_MESSAGE[] = " Score:";
 
@@ -132,7 +131,7 @@ void loop()
 
     case GAME_STATE_PRINT_SCORE:
 
-        print_text(0, LED_MX_MAX_DEVICES - 1, GAME_OVER);
+        print_text(0, LED_MX_MAX_DEVICES - 1, GAME_OVER_MESSAGE);
         delay(1500);
 
         print_text(0, LED_MX_MAX_DEVICES - 1, SCORE_MESSAGE);
