@@ -117,6 +117,8 @@ void loop()
             
             if(snake.has_eaten(food_coordinates))
             {
+                // I did not add logic to check if food is generated
+                // on top of the snake. I like this way more. 
                 food_coordinates.x = random(0, led_mx_max_x);
                 food_coordinates.y = random(0, led_mx_max_y);
             }
