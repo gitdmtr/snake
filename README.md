@@ -2,12 +2,13 @@
 Classic snake game.
 
 # Hardware
-ESP32 
-LED matrix max7219
-Analog joystick
+1. ESP32 
+2. LED matrix MAX7219
+3. Analog joystick
 
-# Firmware
-PlatformIO to compile FW.
+# Firmware compilation
+- PlatformIO to compile FW in VS Code.
+- It is possible to compile that on WOKWI server as well.
 
 # Simulation
 WOKWI for simulation.
