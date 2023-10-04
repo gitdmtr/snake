@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Dmytro Yakobiuk",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 14.3, "left": 91, "attrs": {} },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": -67.8,
+      "left": -42.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix1",
+      "top": -153,
+      "left": -155.76,
+      "attrs": { "chain": "4" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "joystick1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "joystick1:SEL", "esp:D34", "green", [ "v0" ] ],
+    [ "joystick1:HORZ", "esp:D35", "green", [ "v0" ] ],
+    [ "joystick1:VERT", "esp:D32", "green", [ "v0" ] ],
+    [ "joystick1:VCC", "esp:VIN", "red", [ "v0" ] ],
+    [ "matrix1:GND", "esp:GND.1", "black", [ "h96", "v288.1" ] ],
+    [ "matrix1:CLK", "esp:D18", "green", [ "h57.6", "v192" ] ],
+    [ "matrix1:V+", "esp:VIN", "green", [ "v-38.4", "h-489.6", "v316.8" ] ],
+    [ "esp:D23", "matrix1:DIN", "green", [ "h76.5", "v-153.5" ] ],
+    [ "matrix1:CS", "esp:D22", "green", [ "h76.8", "v153.6", "h-66.9" ] ]
+  ],
+  "dependencies": {}
+}
